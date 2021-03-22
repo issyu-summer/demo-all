@@ -1,0 +1,28 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/mybatis-plus-test?serverTimezone=GMT%2B8
+    password: issyu153
+    name: redis-test
+  redis:
+    host: 192.168.119.136
+    port: 6379
+    password: issyu153
+    jedis:
+      pool:
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 8
+        #连接池最大阻塞等待时间（使用负值没有限制）
+        max-wait: -1
+        #连接池最大的空闲连接
+        max-idle: 8
+        #连接池最小的空闲连接
+        min-idle: 0
+    #连接超时时间（毫秒）
+    timeout: 1200
+  mybatis:
+    configuration:
+      map-underscore-to-camel-case: ture

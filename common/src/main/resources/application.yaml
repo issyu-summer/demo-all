@@ -1,0 +1,2 @@
+JWT:
+  expired-time: 30*60*1000
